@@ -1,0 +1,1 @@
+<p><?= $settings['external_id_label']; ?> <b><?php echo $subject['Subject']['external_id']; ?></b> (<?php echo $subject['Site']['site_name']; ?> ratio: <?php echo $subject['Site']['site_ratio']; ?>) assigned to <b><?php echo $subject['Group']['group_name']; ?></b> by <b><?php echo $subject['User']['fullname'];?></b> [<b><?php echo $subject['User']['username'];?></b>]</p>
