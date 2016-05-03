@@ -34,11 +34,13 @@ http://natesimpson.com/umproject
 
 ## Installation (Advanced)
 
-The application is based on the [CakePHP 2](http://cakephp.org/) framework. In order to install the application, you should first install the most recent version of CakePHP 2.x - please refer to the [CakePHP 2 documentation](http://book.cakephp.org/2.0/en/installation.html) for instructions on doing this.
+The application is based on the [CakePHP 2](http://cakephp.org/) framework. In order to install the application, you should first install the most recent version of CakePHP 2.x - please refer to the [CakePHP 2 documentation](http://book.cakephp.org/2.0/en/installation.html) for instructions on doing this. If using Apache, you may need to enable and configure `mod_rewrite` according to [this documention](http://book.cakephp.org/2.0/en/installation/url-rewriting.html).
 
-Once you have CakePHP installed and configured, import the contents of *database.sql* to your MySQL server.
+Once you have CakePHP installed and configured, import the contents of *database.sql* to your MySQL server. **This will insert several test users with fake emails and insecure credentials; do not leave them unaltered when deploying this application in a production environment.**
 
 You may then replace the contents of the default CakePHP "app" directory with the contents of the "app" directory in this repository. You will need to modify the file permissions of the app/tmp directory and all subdirectories so that they are writeable by the web server user (e.g., "www-data" for many Apache2-based systems). You will also need to modify *app/Config/database.php* so that "DBUSER", "DBPASS", and "DATABASE" reflect the database to which you imported *database.sql*.
+
+You also need to configure the hosting server's mail server and configure your webserver's `php.ini` appropriately. Once this is done, copy `app/Config/email.php.default` to `app/Config/email.php` and make the appropriate changes. If this is not configured correctly, users can add subjects, but will not receive any confirmation that the subject was added or to which group they were assigned.
 
 ## Architecture Notes (Advanced)
 
