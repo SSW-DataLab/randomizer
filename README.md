@@ -1,3 +1,6 @@
+[![DOI](https://zenodo.org/badge/21663/SSW-DataLab/randomizer.svg)](https://zenodo.org/badge/latestdoi/21663/SSW-DataLab/randomizer)
+
+
 # Pay for Success
 
 
